@@ -1,11 +1,11 @@
 /**
- * Super simple wysiwyg editor v0.8.9
+ * Super simple wysiwyg editor v0.8.10
  * https://summernote.org
  *
  * Copyright 2013- Alan Hong. and other contributors
  * summernote may be freely distributed under the MIT license.
  *
- * Date: 2017-12-25T06:39Z
+ * Date: 2018-02-14T23:39Z
  */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('jquery')) :
@@ -3748,7 +3748,7 @@ var Editor = /** @class */ (function () {
             })(idx);
             this.context.memo('help.formatH' + idx, this.lang.help['formatH' + idx]);
         }
-
+        
         this.insertParagraph = this.wrapCommand(function () {
             _this.typing.insertParagraph(_this.editable);
         });
@@ -6088,7 +6088,7 @@ var ImageDialog = /** @class */ (function () {
             ' type="file" name="files" accept="image/*" multiple="multiple" />',
             imageLimitation,
             '</div>',
-            '<div class="form-group note-group-image-url">',
+            '<div class="form-group note-group-image-url" style="overflow:auto;">',
             '<label class="note-form-label">' + this.lang.image.url + '</label>',
             '<input class="note-image-url form-control note-form-control note-input ',
             ' col-md-12" type="text" />',
@@ -6480,7 +6480,7 @@ var HelpDialog = /** @class */ (function () {
         var $container = this.options.dialogsInBody ? this.$body : this.$editor;
         var body = [
             '<p class="text-center">',
-            '<a href="http://summernote.org/" target="_blank">Summernote 0.8.9</a> · ',
+            '<a href="http://summernote.org/" target="_blank">Summernote 0.8.10</a> · ',
             '<a href="https://github.com/summernote/summernote" target="_blank">Project</a> · ',
             '<a href="https://github.com/summernote/summernote/issues" target="_blank">Issues</a>',
             '</p>'
@@ -7040,7 +7040,7 @@ $$1.fn.extend({
 });
 
 $$1.summernote = $$1.extend($$1.summernote, {
-    version: '0.8.9',
+    version: '0.8.10',
     ui: ui,
     dom: dom,
     plugins: {},
